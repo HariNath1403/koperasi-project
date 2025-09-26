@@ -1,0 +1,55 @@
+// Colors
+$color-main: #0056b3;
+$color-accent: #d96941;
+$color-shade: #e9ecef;
+$color-background: #fef9f4;
+$color-text: #2c2c2c;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-error: #d62828;
+$color-gray: #6c757d;
+
+$color-main: #2c2c2c;
+
+// Font-Sizes
+$font-xxs: 0.8rem;
+$font-xs: 1.2rem;
+$font-sm: 1.4rem;
+$font-base: 1.6rem;
+$font-md: 1.8rem;
+$font-lg: 2rem;
+$font-xl: 2.4rem;
+$font-2xl: 3rem;
+$font-3xl: 4.2rem;
+$font-4xl: 5.6rem;
+
+// Whitespace
+$space-xxs: 0.4rem;
+$space-xs: 0.8rem;
+$space-sm: 1.2rem;
+$space-md: 1.6rem;
+$space-lg: 2.4rem;
+$space-xl: 3.2rem;
+$space-2xl: 4rem;
+$space-3xl: 5.6rem;
+$space-4xl: 7.2rem;
+$space-5xl: 8.4rem;
+
+// Available Font Weights
+// 300, 400 & 700
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      // 600px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab {
+    @media (max-width: 75em) {
+      // 1200px
+      @content;
+    }
+  }
+}
