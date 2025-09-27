@@ -91,7 +91,7 @@ document.getElementById("login-form").addEventListener("submit", function (e) {
   const password = document.getElementById("password").value.trim();
   const errorMsg = document.getElementById("error-msg");
 
-  if (userId === "KSGEC" && password === "2122") {
+  if (userId === "KSGEC" && password === "211") {
     // correct login
     document.querySelector(".login-page").style.display = "none";
     document.querySelector(".container").style.display = "block";
