@@ -23,6 +23,9 @@
     &--img {
       flex: 1;
       max-width: 40%;
+      height: 30rem;
+      object-fit: cover;
+      object-position: center;
       border-radius: $space-xs;
       box-shadow: 0 4px 12px rgba($color-black, 0.2);
     }

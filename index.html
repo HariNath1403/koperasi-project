@@ -14,8 +14,28 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="login-page">
+      <div class="login-form-wrapper">
+        <img src="images/Logo.png" alt="KSGEC Logo" class="login-logo" />
+        <h1>
+          Koperasi Kakitangan Kerajaan Daerah Kuala Selangor Berhad (KSGEC)
+        </h1>
+        <form id="login-form">
+          <input type="text" id="user_id" placeholder="User ID" required />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+          <button type="submit">Login</button>
+          <p id="error-msg"></p>
+        </form>
+      </div>
+    </div>
+    <div class="container" style="display: none">
       <section class="home" id="home">
+        <!-- NAV stays on top -->
         <nav class="nav">
           <img src="images/Logo.png" alt="KSGEC Logo" class="nav__logo--img" />
           <ion-icon
@@ -39,62 +59,119 @@
           </ul>
         </nav>
 
-        <div class="home__main">
-          <div class="home__left">
-            <h3 class="home__left--tag">Koperasi Merakyatkan Ekonomi Negara</h3>
-            <h2 class="home__left--header">
-              Koperasi Kakitangan Kerajaan Daerah Kuala Selangor Berhad (KSGEC)
-            </h2>
-            <p class="home__left--desc">
-              <strong>Visi:</strong>
-              Menjadi koperasi kluster kerajaan yang memartabatkan kebajikan
-              penjawat awam melalui pembiayaan inovatif dan simpanan berteraskan
-              integriti.
-            </p>
-
-            <a class="btn" href="#about">Learn More</a>
-          </div>
-
-          <div class="home__right">
-            <div class="home__right--figure">
-              <button class="slider-btn left" id="prev-btn">&#10094;</button>
-              <img
-                id="slider-image"
-                src="images/home-1.jpg"
-                alt="Government employees working together"
-                class="home__right--figure--img"
-              />
-              <button class="slider-btn right" id="next-btn">&#10095;</button>
+        <!-- SLIDER -->
+        <div class="slider">
+          <!-- Slide 1 -->
+          <div class="slide slide-1">
+            <video autoplay muted loop playsinline class="slide-video">
+              <source src="images/background.mp4" type="video/mp4" />
+            </video>
+            <div class="overlay"></div>
+            <div class="slide-content">
+              <h1>Selamat Datang Ke Laman Web</h1>
+              <h2>Koperasi Kakitangan Kerajaan Daerah Kuala Selangor Berhad</h2>
             </div>
           </div>
-        </div>
 
-        <div class="home__footer">
-          <h2 class="home__footer--header">Cari kami di:</h2>
-          <div class="home__footer--icon">
-            <ion-icon
-              name="logo-youtube"
-              class="home__footer--icon--ion"
-            ></ion-icon>
-            <ion-icon
-              name="logo-facebook"
-              class="home__footer--icon--ion"
-            ></ion-icon>
+          <!-- Slide 2 (your current home content without nav) -->
+          <div class="slide slide-2">
+            <div class="slide-bg"></div>
+            <div class="home__main">
+              <div class="home__left">
+                <p class="home__left--tagline">
+                  Koperasi Merakyatkan Ekonomi Negara
+                </p>
+                <h2 class="home__left--header">
+                  Koperasi Kakitangan Kerajaan Daerah Kuala Selangor Berhad
+                  (KSGEC)
+                </h2>
+                <p class="home__left--desc">
+                  Kerajaan MADANI akan terus menyokong dan memperkasakan sektor
+                  koperasi sebagai pemacu pertumbuhan ekonomi untuk rakyat.
+                </p>
+                <a class="btn" href="#about">Learn More</a>
+              </div>
 
-            <ion-icon
-              name="logo-tiktok"
-              class="home__footer--icon--ion"
-            ></ion-icon>
+              <div class="home__right">
+                <div class="home__right--figure">
+                  <img
+                    src="images/Logo.png"
+                    alt="KSGEC Logo"
+                    class="home__right--figure--img"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
+
+          <!-- Slide 3 (Visi, summarized) -->
+          <div class="slide slide-3">
+            <div class="slide-content">
+              <h2>KSGEC — Visi, Misi & Objektif</h2>
+              <p class="tagline">Koperasi Merakyatkan Ekonomi Negara</p>
+
+              <div class="cards">
+                <!-- VISI -->
+                <div class="card visi">
+                  <h3>Visi</h3>
+                  <p>
+                    Menjadi koperasi kluster kerajaan yang memartabatkan
+                    kebajikan penjawat awam melalui pembiayaan inovatif dan
+                    simpanan terhormat — menjelang ulang tahun ke-100 KSGEC pada
+                    7 Mei 2032.
+                  </p>
+                </div>
+
+                <!-- LATAR BELAKANG -->
+                <div class="card sejarah">
+                  <h3>Latar Belakang</h3>
+                  <p>
+                    Bermula sejak zaman penjajahan British, koperasi ditubuhkan
+                    bagi melindungi penjawat awam daripada beban hutang dan
+                    pinjaman tidak berlesen, seterusnya memperkukuh kebajikan
+                    kewangan mereka.
+                  </p>
+                </div>
+
+                <!-- MISI -->
+                <div class="card misi">
+                  <h3>Misi</h3>
+                  <ul>
+                    <li>
+                      Kerjasama G2G & antarabangsa untuk program kebajikan.
+                    </li>
+                    <li>Pengecualian cukai & galakan dana kepada koperasi.</li>
+                    <li>Tadbir urus telus bersama BNM & KWSP.</li>
+                  </ul>
+                </div>
+
+                <!-- OBJEKTIF -->
+                <div class="card objektif">
+                  <h3>Objektif Utama</h3>
+                  <ul>
+                    <li>Struktur semula hutang penjawat awam.</li>
+                    <li>Cipta simpanan persaraan terjamin.</li>
+                    <li>Kurangkan pinjaman tidak sah (along).</li>
+                    <li>Galakkan tabungan generasi muda.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider navigation -->
+          <button class="slider-btn left" id="prev-btn">&#10094;</button>
+          <button class="slider-btn right" id="next-btn">&#10095;</button>
         </div>
       </section>
+
       <section class="about" id="about">
         <h2 class="about__header">Tentang Kami</h2>
 
         <!-- Row 1: image - text -->
         <div class="about__row">
           <img
-            src="images/home-1.jpg"
+            src="images/gallery/pic-7.jpeg"
             alt="Sejarah Koperasi"
             class="about__row--img"
           />
@@ -120,7 +197,7 @@
             kehormatan penjawat awam.
           </p>
           <img
-            src="images/home-2.jpg"
+            src="images/gallery/pic-9.jpeg"
             alt="Peranan Sosial"
             class="about__row--img"
           />
@@ -129,7 +206,7 @@
         <!-- Row 3: image - text -->
         <div class="about__row">
           <img
-            src="images/home-3.jpg"
+            src="images/gallery/pic-8.jpeg"
             alt="Visi Masa Depan"
             class="about__row--img"
           />
